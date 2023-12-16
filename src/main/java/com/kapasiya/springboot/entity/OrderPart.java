@@ -41,7 +41,9 @@ public class OrderPart
 	private String shipmentMethodEnumId;
 	
 	
-	
+	@ManyToOne
+	@JoinColumn(name="orderId", nullable=false)
+	private Party party;
 
 
 	public OrderPart(String orderId, String orderPartSeqId, String partName, String statusId, String vendorPartyId,
@@ -149,8 +151,6 @@ public class OrderPart
 		this.shipmentMethodEnumId = shipmentMethodEnumId;
 	}
 
-
-	
 
 
 	public OrderPart() {
