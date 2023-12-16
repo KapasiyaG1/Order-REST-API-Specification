@@ -55,7 +55,7 @@ public class OrderHeader
 	
 	@ManyToOne
 	@JoinColumn(name="orderId", nullable=false)
-	private SalesChannelEnumId saleschannelenumid;
+	private OrderHeader orderheader;
 	
 	
 

@@ -44,9 +44,9 @@ public class Person
 	private String employmentStatusEnumId;
 	
 	
-//	@ManyToOne
-//	@JoinColumn(name="partyId", nullable=false)
-//    private Party party;
+	@ManyToOne
+	@JoinColumn(name="partyId", nullable=false)
+    private Party party;
 
 
 	public String getPartyId() {

@@ -69,24 +69,24 @@ public class Party
 	}
 
 
-//	public PartyTypeEnumId getPartytypeenumId() {
-//		return partytypeenumId;
-//	}
-//
-//
-//	public void setPartytypeenumId(PartyTypeEnumId partytypeenumId) {
-//		this.partytypeenumId = partytypeenumId;
-//	}
-//
-//
-//	public Order_Part getOrderpart() {
-//		return orderpart;
-//	}
-//
-//
-//	public void setOrderpart(Order_Part orderpart) {
-//		this.orderpart = orderpart;
-//	}
+	public PartyTypeEnumId getPartytypeenumId() {
+		return partytypeenumId;
+	}
+
+
+	public void setPartytypeenumId(PartyTypeEnumId partytypeenumId) {
+		this.partytypeenumId = partytypeenumId;
+	}
+
+
+	public Order_Part getOrderpart() {
+		return orderpart;
+	}
+
+
+	public void setOrderpart(Order_Part orderpart) {
+		this.orderpart = orderpart;
+	}
 
 
 	public Party() {
