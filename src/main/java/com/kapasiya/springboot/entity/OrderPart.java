@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 public class OrderPart 
 {
 	@Id
+	@Column(insertable=false, updatable=false)
 	private String orderId;
 	
 	@Column(name ="orderPartSeqId", nullable = false)
@@ -42,7 +43,7 @@ public class OrderPart
 	
 	
 	@ManyToOne
-	@JoinColumn(name="orderId", nullable=false)
+	@JoinColumn(name="orderparty", nullable=false)
 	private Party party;
 
 

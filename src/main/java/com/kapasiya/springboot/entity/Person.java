@@ -45,8 +45,8 @@ public class Person
 	
 	
 	@ManyToOne
-	@JoinColumn(name="partyId", nullable=false)
-    private Party party;
+	@JoinColumn(name="person", nullable=false)
+    private Person person;
 
 
 	public String getPartyId() {
