@@ -10,10 +10,10 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "addorderitems")
-public class AddOrderItems
+@Table(name = "orderitems")
+public class OrderItems
 {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private String productId;
 	
@@ -32,20 +32,10 @@ public class AddOrderItems
 	@Column(name ="customerPartyId", nullable = false)
 	private String customerPartyId;
 	
-	@Column(name ="item_details", nullable = false)
+	@Column(name ="itemdetails", nullable = false)
 	private String item_details;
 	
 
-	
-    @ManyToOne
-	@JoinColumn(name="itemDescription", nullable=false)
-	private String itemDescription;
-    
-    @Column(name ="quantity", nullable = false)
-	private String quantity;
-    
-    @Column(name ="unitAmount", nullable = false)
-	private String unitAmount;
 
 	public String getProductId() {
 		return productId;
@@ -103,31 +93,9 @@ public class AddOrderItems
 		this.item_details = item_details;
 	}
 
-	public String getItemDescription() {
-		return itemDescription;
-	}
 
-	public void setItemDescription(String itemDescription) {
-		this.itemDescription = itemDescription;
-	}
 
-	public String getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(String quantity) {
-		this.quantity = quantity;
-	}
-
-	public String getUnitAmount() {
-		return unitAmount;
-	}
-
-	public void setUnitAmount(String unitAmount) {
-		this.unitAmount = unitAmount;
-	}
-
-	public AddOrderItems(String productId, String orderId, String partName, String facilityId,
+	public OrderItems(String productId, String orderId, String partName, String facilityId,
 			String shipmentMethodEnumId, String customerPartyId, String item_details, String itemDescription,
 			String quantity, String unitAmount) {
 		super();
@@ -138,12 +106,10 @@ public class AddOrderItems
 		this.shipmentMethodEnumId = shipmentMethodEnumId;
 		this.customerPartyId = customerPartyId;
 		this.item_details = item_details;
-		this.itemDescription = itemDescription;
-		this.quantity = quantity;
-		this.unitAmount = unitAmount;
+		
 	}
 
-	public AddOrderItems() {
+	public OrderItems() {
 		super();
 	}
 

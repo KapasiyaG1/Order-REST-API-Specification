@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>API</title>
+<link   rel="stylesheet" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+		crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Create order</h1>
+				<div class="card-body">
+					<form th:action="@{/orders}" th:object = "${order}" method="POST">
+						<div class="form-group">
+							<label>Order Id</label>
+							<input
+								type = "number"
+								name = "orderId"
+								th:field = "*{orderId}"
+								class = "form-control"
+								placeholder = "Enter Order Id"
+							/>
+							
+							<label>Order Name</label>
+							<input
+								type = "text"
+								name = "ordername"
+								th:field = "*{ordername}"
+								class = "form-control"
+								placeholder = "Enter ordername"
+							/>
+							
+							<label>currencyUomId</label>
+							<input
+								type = "text"
+								name = "currencyUomId"
+								th:field = "*{currencyUomId}"
+								class = "form-control"
+								placeholder = "Enter currencyUomId"
+							/>
+							
+							<label>Sales Channel Enum Id</label>
+							<input
+								type = "number"
+								name = "salesChannelEnumId"
+								th:field = "*{salesChannelEnumId}"
+								class = "form-control"
+								placeholder = "Enter Sales Channel Enum Id"
+							/>
+							
+							<label>status Id</label>
+							<input
+								type = "text"
+								name = "statusId"
+								th:field = "*{statusId}"
+								class = "form-control"
+								placeholder = "Enter statusId"
+							/>
+							
+							<label>productStoreId</label>
+							<input
+								type = "text"
+								name = "productStoreId"
+								th:field = "*{productStoreId}"
+								class = "form-control"
+								placeholder = "Enter productStoreId"
+							/>
+							
+							<label>placedDate</label>
+							<input
+								type = "text"
+								name = "placedDate"
+								th:field = "*{placedDate}"
+								class = "form-control"
+								placeholder = "Enter placed Date"
+							/>
+						</div>
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

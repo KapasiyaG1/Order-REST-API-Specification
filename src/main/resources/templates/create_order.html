@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Orders</title>
+<link   rel="stylesheet" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+		crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Create Order</h1>
+				<div class="card-body">
+					<form th:action="@{/orders}" th:object = "${order}" method="POST">
+						<div class="form-group">
+							<label>Order Name</label>
+							<input
+								type = "number"
+								name = "ordername"
+								th:field = "*{ordername}"
+								class = "form-control"
+								placeholder = "Enter Order Name"
+							/>
+							
+							<label>Currency Uom Id</label>
+							<input
+								type = "text"
+								name = "currencyUomId"
+								th:field = "*{currencyUomId}"
+								class = "form-control"
+								placeholder = "Enter Currency Uom Id"
+							/>
+							
+							<label>Sales Channel Enum Id</label>
+							<input
+								type = "text"
+								name = "salesChannelEnumId"
+								th:field = "*{salesChannelEnumId}"
+								class = "form-control"
+								placeholder = "Enter salesChannelEnumId"
+							/>
+							
+							<label>Status Id</label>
+							<input
+								type = "number"
+								name = "statusId"
+								th:field = "*{statusId}"
+								class = "form-control"
+								placeholder = "Enter statusId"
+							/>
+							
+							<label>Product Store Id</label>
+							<input
+								type = "text"
+								name = "productStoreId"
+								th:field = "*{productStoreId}"
+								class = "form-control"
+								placeholder = "Enter product StoreId"
+							/>
+							
+							<label>Placed Date</label>
+							<input
+								type = "text"
+								name = "placedDate"
+								th:field = "*{placedDate}"
+								class = "form-control"
+								placeholder = "Enter placedDate"
+							/>
+							
+						</div>
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 @Table(name = "order")
 public class Order 
 {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Long orderId;
 	
@@ -33,10 +33,12 @@ public class Order
 	@Column(name ="placedDate", nullable = false)
     private String placedDate;
 
-	public Order( String ordername, String currencyUomId, String salesChannelEnumId, String statusId,
+	
+
+	public Order(Long orderId, String ordername, String currencyUomId, String salesChannelEnumId, String statusId,
 			String productStoreId, String placedDate) {
 		super();
-		
+		this.orderId = orderId;
 		this.ordername = ordername;
 		this.currencyUomId = currencyUomId;
 		this.salesChannelEnumId = salesChannelEnumId;
@@ -104,10 +106,6 @@ public class Order
 	public Order() {
 		super();
 	}
-	
-	
-	
-	
 	
 
 }
